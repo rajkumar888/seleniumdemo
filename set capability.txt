@@ -1,0 +1,13 @@
+FirefoxProfile fp = new FirefoxProfile();
+// set something on the profile...
+DesiredCapabilities dc = DesiredCapabilities.firefox();
+dc.setCapability(FirefoxDriver.PROFILE, fp);
+WebDriver driver = new RemoteWebDriver(dc);
+
+
+ChromeOptions options = new ChromeOptions();
+// set some options
+DesiredCapabilities dc = DesiredCapabilities.chrome();
+dc.setCapability(ChromeOptions.CAPABILITY, options);
+WebDriver driver = new RemoteWebDriver(dc);
+
